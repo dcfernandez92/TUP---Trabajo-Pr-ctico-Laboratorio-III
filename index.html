@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+
+	<head>
+		<meta charset="utf-8">		
+		<title>Cuestionario</title>
+
+		<link rel="stylesheet" href="css/estilos.css">
+		<script src="js/javascript.js" type="text/javascript"></script>
+	</head>
+
+	<body>
+		<header>
+			<nav>
+				<div id="barra_navegacion">
+					<a href="./index.html">Cuestionario</a>
+				</div>				
+			</nav>
+			<div id="titulo">
+				<h1>Trivia Musical</h1>
+			</div>
+		</header>
+
+		<main>
+			<section id="reglasTrivia">
+				<div>
+					<h2>¿Cuánto sabés sobre música popular?</h2>
+					<p>Bienvenido a la Trivia musical, se realizarán 5 preguntas sobre diferentes estilos y grupos musicales</p>
+					<p>Al finalizar se deberá presionar en "Finalizar Cuestionario" para obtener el resultado y verificar las respuestas correctas</p>
+				</div>
+			</section>
+			
+			<div id="comenzar"><input type="button" value="Comenzar Trivia" onclick="comenzarTrivia()"></div>
+				
+			<form action="submit" method="GET">
+				<section class="secPreguntas">				
+					<article id="p1">
+						<h2>Pregunta 1</h2>
+						<p>1. ¿Cuál de estas portadas fue utilizada en el disco "Animals" de la banda Pink Floyd?</p>			
+
+						<div class="opciones">
+							<div class="respuesta">
+								<img src="./img/Pregunta1_Animals.jpg" alt="Pregunta 1, Pink Floyd">
+								<div><input type="radio" name="pregunta1" value="correcta" checked></div>
+							</div>
+
+							<div class="respuesta">
+								<img src="./img/Pregunta1_AtomHeart.jpg" alt="Pregunta 1, Pink Floyd">
+								<div><input type="radio" name="pregunta1" value="incorrecta"></div>
+							</div>
+							
+							<div class="respuesta">
+								<img src="./img/Pregunta1_DivisionBell.jpg" alt="Pregunta 1, Pink Floyd">
+								<div><input type="radio" name="pregunta1" value="incorrecta"></div>
+							</div>
+						</div>				
+							
+						
+						<div class="boton">							
+							<input type="button" id="respuesta1" value="Siguiente" onclick="siguientePregunta()">
+						</div>
+					</article>
+
+					<article id="p2">
+						<h2>Pregunta 2</h2>
+						<p>2. ¿A qué grupo musical pertenece la canción que se escucha a continuación?</p>
+
+						<div class="reproductor">
+							<audio controls>
+								<source src="./media/pregunta2.ogg" type="audio/ogg">
+							</audio>
+						</div>
+
+						<div class="opciones2">
+							<div class="respuesta">
+								<input type="radio" name="pregunta2" value="incorrecta" checked>
+								<label>Conociendo Rusia</label>								
+							</div>
+
+							<div class="respuesta">
+								<input type="radio" name="pregunta2" value="correcta">
+								<label>Lo' Pibitos</label>								
+							</div>
+							
+							<div class="respuesta">
+								<input type="radio" name="pregunta2" value="incorrecta">
+								<label>Bándalos Chinos</label>								
+							</div>
+						</div>
+
+						<div class="boton">
+							<input type="button" id="respuesta2" value="Siguiente" onclick="siguientePregunta()">
+						</div>
+					</article>
+
+					<article id="p3">
+						<h2>Pregunta 3</h2>
+						<p>3. ¿Qué instrumento andino utiliza Gustavo Santaolalla con regularidad y con el cual grabó un CD completo?  </p>
+
+						<div class="opciones">
+							<div class="respuesta">
+								<img src="./img/Pregunta3_Cuatro.jpg" alt="Pregunta 3, instrumento">		
+								<div><input type="radio" name="pregunta3" value="incorrecta" checked></div>
+								<label>Cuatro</label>
+							</div>
+
+							<div class="respuesta">
+								<img src="./img/Pregunta3_Ronroco.jpg" alt="Pregunta 3, instrumento">
+								<div><input type="radio" name="pregunta3" value="correcta"></div>
+								<label>Ronroco</label>
+							</div>
+							
+							<div class="respuesta">
+								<img src="./img/Pregunta3_Charango.jpg" alt="Pregunta 3, instrumento">
+								<div><input type="radio" name="pregunta3" value="incorrecta"></div>
+								<label>Charango</label>
+							</div>
+						</div>
+						
+						<div class="boton">							
+							<input type="button" id="respuesta3" value="Siguiente" onclick="siguientePregunta()">
+						</div>						
+					</article>
+
+					<article id="p4">
+						<h2>Pregunta 4</h2>
+						<p>4. ¿Cómo es el nombre del artista que grabó junto con Queen la canción "Under Pressure"?</p>
+
+						<div class="opciones">
+							<div class="respuesta">
+								<img src="./img/Pregunta4_Bowie.jpg" alt="Pregunta 3, instrumento">
+								<div><input type="radio" name="pregunta4" value="correcta" checked></div>
+								<label>David Bowie</label>					
+							</div>
+
+							<div class="respuesta">
+								<img src="./img/Pregunta4_Gilmour.jpg" alt="Pregunta 3, instrumento">
+								<div><input type="radio" name="pregunta4" value="incorrecta"></div>
+								<label>David Gilmour</label>					
+							</div>
+							
+							<div class="respuesta">
+								<img src="./img/Pregunta4_Plant.jpg" alt="Pregunta 3, instrumento">
+								<div><input type="radio" name="pregunta4" value="incorrecta"></div>
+								<label>Robert Plant</label>						
+							</div>
+						</div>
+
+						<div class="boton">
+							<input type="button" id="respuesta4" value="Siguiente" onclick="siguientePregunta()">
+						</div>						
+					</article>
+
+					<article id="p5">
+						<h2>Pregunta 5</h2>
+						<p>5. "Voy marchándome en tu reloj, voy viajando para siempre, cuando acabará este dolor(...)"¿Cómo continúa la letra de la canción?</p>
+						
+						<div class="reproductor">
+							<audio controls>
+								<source src="./media/pregunta4.ogg" type="audio/ogg">
+							</audio>
+						</div>
+
+						<div class="opciones2">
+							<div class="respuesta">
+								<input type="radio" name="pregunta5" value="incorrecta" checked>
+								<label>Tan solo durará en el viento</label>					
+							</div>
+
+							<div class="respuesta">
+								<input type="radio" name="pregunta5" value="incorrecta">
+								<label>Quizás ya no podré mirarte</label>					
+							</div>
+							
+							<div class="respuesta">
+								<input type="radio" name="pregunta5" value="correcta">
+								<label>Y que será de toda la gente</label>					
+							</div>
+						</div>
+
+						<div class="boton">
+							<input type="button" id="respuesta5" value="Finalizar" onclick="siguientePregunta()">
+						</div>					
+					</article>								
+				</section>
+
+				<section id="secCalificacion">
+					<div>						
+						<div id="resultadoTrivia"></div>						
+					</div>				
+				</section>
+
+				<div id="reintentar"><input type="button" value="Reintentar Trivia" onclick="reintentarTrivia()"></div>
+
+			</form>
+		</main>
+	</body>
+
+</html>
